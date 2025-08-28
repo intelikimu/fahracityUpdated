@@ -28,7 +28,7 @@ export default function HeroSection() {
 
     // Slow down video speed
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5 // 👈 0.5 = half speed, 0.25 = very slow, 2.0 = double speed
+      videoRef.current.playbackRate = 1// 👈 0.5 = half speed, 0.25 = very slow, 2.0 = double speed
     }
   }, [])
 
@@ -43,7 +43,7 @@ export default function HeroSection() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover -z-10"
       >
-        <source src="/glowingsphere.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/djteymcm1/video/upload/v1756357997/bg-hero_o0rkrz.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
