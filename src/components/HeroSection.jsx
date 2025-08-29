@@ -33,7 +33,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative min-h-screen w-full overflow-hidden pt-16 md:pt-20 -mt-16 md:-mt-20">
       {/* Background Video */}
       <video
         ref={videoRef}
@@ -48,19 +48,22 @@ export default function HeroSection() {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 -z-5"></div>
+      <div className="absolute inset-0 bg-black/30 -z-10"></div>
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen">
         <div className="container mx-auto px-4">
           <motion.div ref={textRef} className="text-center max-w-5xl mx-auto">
-            <h1 className="mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-100">
+           <h1 className="mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-100">
               Next-Gen{" "}
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Tech Solutions
+              <span className="inline-flex items-center md:rounded-lg md:px-2 md:py-1 md:bg-white/10 md:border md:border-white/20">
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  Tech Solutions
+                </span>
               </span>{" "}
               for Your Business
             </h1>
+
             <p className="mb-8 text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">
               Transforming ideas into powerful digital experiences with
               cutting-edge technologies, AI, and innovative solutions

@@ -42,15 +42,19 @@ export default function Navbar() {
 
   return (
     <motion.nav 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed w-full px-4 py-3 md:px-6 md:py-4 z-50 transition-all duration-300 ${
-        scrolled
-          ? ' backdrop-blur-sm shadow-lg'
-          : ' border-b border-[#2a2a2a]'
-      }`}
-    >
+    initial={{ y: -100 }}
+    animate={{ y: 0 }}
+    transition={{ duration: 0.5 }}
+    className={`fixed top-0 left-0 right-0 
+                border-b border-[#2a2a2a] 
+                w-full px-4 py-3 md:px-6 md:py-4 
+                z-50 transition-all duration-300 
+                  h-14 md:h-16
+                ${scrolled
+                  ? 'backdrop-blur-md shadow-lg'
+                  : ' backdrop-blur-md'
+                }`}
+  >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <motion.div 
@@ -124,9 +128,9 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden  border-t border-[#2a2a2a] mt-3"
+            className="md:hidden overflow-hidden border-t border-[#2a2a2a] mt-0 absolute left-0 right-0 top-full bg-[#0b0b0b]/95 backdrop-blur-md"
           >
-            <div className="container mx-auto py-4 px-4">
+            <div className="container mx-auto py-4 px-4 max-h-[calc(100vh-64px)] overflow-y-auto">
               <ul className="flex flex-col space-y-4">
                 {navLinks.map((link, index) => (
                   <motion.li

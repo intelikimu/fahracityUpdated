@@ -36,11 +36,9 @@ import CTA from '@/components/CTA';
 
 export default function Home() {
   return (
-    // <InteractiveBackground>
-    <>
 
-  
-    
+    <> 
+
       <HeroSection />
       <WhoWeAre />
       
@@ -64,7 +62,10 @@ export default function Home() {
         <CTA />
       {/* </Suspense> */}
     </>
+
+  
+    
       
-    // </InteractiveBackground>
+
   );
 }
